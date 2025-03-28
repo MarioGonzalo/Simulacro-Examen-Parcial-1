@@ -1,4 +1,6 @@
-https://github.com/MarioGonzalo/Simulacro-Examen-Parcial-1.git
+Repositorio: https://github.com/MarioGonzalo/Simulacro-Examen-Parcial-1.git 
+Pages: https://mariogonzalo.github.io/Simulacro-Examen-Parcial-1/
+
 # Simulacro-Examen-Parcial-1
 
 # Pregunta 1: Modelos OSI y TCP/IP
