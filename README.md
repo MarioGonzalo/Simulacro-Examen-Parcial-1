@@ -104,5 +104,41 @@
     - **Llamadas y videoconferencias (Zoom, Microsoft Teams, Skype)** → Prefiere velocidad a retransmisión de datos perdidos.
     - **Sistemas de radiodifusión** → Envía datos a múltiples usuarios sin necesidad de confirmación.
 
+# Pregunta 4: Protocolo para Transferencia de Archivos  
+
+## a) Protocolo Tradicional en TCP/IP  
+- El protocolo tradicionalmente utilizado para la transferencia de archivos en redes TCP/IP es **FTP (File Transfer Protocol)**.  
+- **Características de FTP**:
+  - Permite la transferencia de archivos entre clientes y servidores en una red.
+  - Usa **TCP** (puertos **20** para datos y **21** para comandos).
+  - Soporta **modo activo y pasivo** para conexiones.
+  - No cifra los datos por defecto, lo que lo hace vulnerable a ataques.
+
+## b) Alternativas a FTP  
+
+### 1. **SFTP (Secure File Transfer Protocol)**  
+- **Seguridad**: Más seguro que FTP, ya que cifra la comunicación mediante **SSH (Secure Shell)**.  
+- **Puertos**: Utiliza el puerto **22** en lugar de los puertos 20 y 21 de FTP.  
+- **Diferencias**:
+  - Cifra tanto los datos transferidos como las credenciales de acceso.
+  - Permite autenticación mediante claves SSH.
+  - Más seguro y recomendado en redes públicas o empresariales.  
+
+### 2. **FTPS (FTP Secure / FTP-SSL)**  
+- **Seguridad**: Añade cifrado **SSL/TLS** a FTP, protegiendo las credenciales y los archivos transferidos.  
+- **Puertos**: Sigue usando los puertos **20 y 21** como FTP, pero con cifrado.  
+- **Diferencias**:
+  - Utiliza certificados SSL/TLS para proteger la transferencia.
+  - Requiere configuración adicional en el servidor para gestionar certificados.  
+  - Puede operar en modo **explícito** (requiere comando de encriptación) o **implícito** (cifrado forzado).  
+
+## Comparación de Protocolos  
+
+| Protocolo  | Seguridad | Puertos | Cifrado | Recomendado para |
+|------------|----------|---------|---------|------------------|
+| **FTP**    | Baja     | 20, 21  | No      | Redes internas seguras |
+| **SFTP**   | Alta     | 22      | SSH     | Transferencias seguras en Internet |
+| **FTPS**   | Alta     | 20, 21  | SSL/TLS | Empresas que requieren compatibilidad con FTP |
+
 
 
